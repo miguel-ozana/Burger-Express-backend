@@ -30,6 +30,12 @@ model Token {
   expiration DateTime
 }
 
+model RevokedToken {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  createdAt DateTime @default(now())
+}
+
 enum TokenType {
   EMAIL
   API

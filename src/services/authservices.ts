@@ -32,3 +32,9 @@ export async function loginUser({email, password}: AuthData){
   const token = jwt.sign({ userId: user.id }, SECRET_KEY, { expiresIn: '1h' });
   return token;
 }
+
+export async function revokeToken(token: string) {
+  await prisma.revokedToken.create({
+    data: { token }
+  });
+}
