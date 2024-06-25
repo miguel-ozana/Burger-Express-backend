@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import authRoute from "./routers/auth.route";
 import productsRoute from './routers/products.route';
-import cartRoute from './routers/cart.route'
+import cartRoute from './routers/cart.route';
 
 const app = express();
 const port = process.env.PORT || 8080;
