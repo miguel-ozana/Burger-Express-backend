@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { prisma } from '../lib/prisma.lib';
 
-const JWT_SECRET = process.env.SECRET_KEY || "default key";
+const JWT_SECRET = process.env.SECRET_KEY || "default_secret_key";
 
 export async function authMiddleware(req: Request, res: Response, next: NextFunction) {
   const authHeader = req.headers.authorization;
