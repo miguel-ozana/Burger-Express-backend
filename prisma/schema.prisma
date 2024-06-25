@@ -46,5 +46,5 @@ model Product {
   name        String
   price       Float
   description String
-  rating      Int
+  rating      Int    @default(0)
 }
